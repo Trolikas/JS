@@ -1,7 +1,83 @@
 <html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<style>
+			#ekranas {
+				border: 1px solid #000;
+				width: 260px;
+				height: 60px;
+				font-size: 30px;
+				line-height: 40px;
+				text-align: right;
+				margin: 2px;
+				box-sizing: border-box;
+				background: #eee;
+				margin-bottom: 10px;
+				padding: 3px;
+				overflow-x: scroll;
+				overflow-y: hidden;
+			}
+			#kunas {
+				border: 1px solid #000;
+				display: inline-block;
+				width: 264px;
+				padding: 5px;
+				background: #CD1;
+			}
+			.mygt {
+				border: 1px solid #000;
+				display: inline-block;
+				margin: 2px;
+				width: 60px;
+				height: 60px;
+				text-align: center;
+				line-height: 60px;
+				font-size: 30px;
+				float: left;
+				cursor: pointer;
+				background: #FEA;
+			}
+		</style>
+	</head>
 	<body>
+		<div id="kunas">
+			<div id="ekranas"></div>
+			<div id="mygtukai">
+				<div class="mygt" id="mygt-7">7</div>
+				<div class="mygt" id="mygt-8">8</div>
+				<div class="mygt" id="mygt-9">9</div>
+				<div class="mygt" id="mygt-minus">-</div>
+				
+				<div class="mygt" id="mygt-4">4</div>
+				<div class="mygt" id="mygt-5">5</div>
+				<div class="mygt" id="mygt-6">6</div>
+				<div class="mygt" id="mygt-plius">+</div>
+				
+				<div class="mygt" id="mygt-1">1</div>
+				<div class="mygt" id="mygt-2">2</div>
+				<div class="mygt" id="mygt-3">3</div>
+				<div class="mygt" id="mygt-daugyba">*</div>
+				
+				<div class="mygt" id="mygt-0">0</div>
+				<div class="mygt" id="mygt-kablelis">.</div>
+				<div class="mygt" id="mygt-dalyba">/</div>
+				<div class="mygt" id="mygt-skaiciuoti">=</div>
+			</div>
+		</div>
 		<script type="text/javascript">
-			alert ("Veikia");
+			//alert ("Veikia");
+			function m_1() {
+				//alert('Mygtukas 1 paspaustas.');
+				$('#ekranas').text( $('#ekranas').text() + 1 );
+			}
+			function m_skaiciuoti() {
+				alert('Mygtukas skaiciuoti paspaustas.');
+			}
+			
+			
+			
+			$('#mygt-1').click(m_1);
+			$('#mygt-skaiciuoti').click(m_skaiciuoti);
 		</script>
 	</body>
 </html>
